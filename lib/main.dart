@@ -30,163 +30,54 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    // var arrname = ["Ram", "Shyam","Raja","Mohan", "Sio", "Dio" ,"Mio"];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: Text(widget.title),
       ),
        body:
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child:SingleChildScrollView(
-            child: Column(
-              children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    children: [
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                      width: 200,
-                        color: Colors.lightGreen,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.red,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.yellow,
-                      ),
-                      Container(
-                        margin: EdgeInsets.only(bottom: 11),
-                        height: 200,
-                        width: 200,
-                        color: Colors.brown,
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
+        // ListView.builder(itemBuilder: (context,index){
+        //   return Padding(
+        //     padding: const EdgeInsets.all(8.0),
+        //     child: Text(arrname[index], style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
+        //   );
+        //
+        // },
+        // itemCount: arrname.length,
+        //   itemExtent: 200,
+        //   scrollDirection: Axis.horizontal,
+        // )
+       Center(
+         child: ListView(
+           scrollDirection: Axis.horizontal,
+           reverse: true,
+           children: [
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text("one",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text("Two",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text("Three",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text("Four",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+             ),
+             Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: Text("Five",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
+             )
+           ],
+         ),
 
-                  color: Colors.lightBlue,
-                ), Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
+        ));
 
-                  color: Colors.lightGreenAccent,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
 
-                  color: Colors.blue,
-                ),
-                Container(
-                  margin: EdgeInsets.only(bottom: 11),
-                  height: 200,
-
-                  color: Colors.redAccent,
-                )
-              ],
-            ),
-          ),
-        )
-      Center(
-        child: InkWell(
-          onTap: () {
-            print("Tapped pressed");
-          },
-          onLongPress: () {
-            print("Long  pressed");
-          },
-          onDoubleTap: () {
-            print("double tap pressed");
-          },
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.amber,
-            child: InkWell(
-              child: Center(
-                child: Text(
-                  "Click Me",
-                  style: TextStyle(fontSize: 21, fontWeight: FontWeight.w700),
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-
-      Container(
-          height: 300,
-        width: 200,// Container(
-        child: Column(                                           //     height: 300,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,        //   child: Row(
-          crossAxisAlignment: CrossAxisAlignment.stretch,      //     mainAxisAlignment: MainAxisAlignment.center,
-          children:<Widget> [                                 //     crossAxisAlignment: CrossAxisAlignment.center,
-            Text('A'),                                        //     children:<Widget> [
-            Text('B'),                                        //       Text('A'),
-            Text('C'),                                        //       Text('B'),
-            Text('D'),                                        //       Text('C'),
-            ElevatedButton(onPressed: (){                     //       Text('D'),
-              print("clicked");                               //       ElevatedButton(onPressed: (){
-                                                              //         print("clicked");
-            }, child: Text('Click Me'))                        //
-          ],                                                   //       }, child: Text('Click Me'))
-        ),                                                     //     ],
-      )                                                        //   ),
-          s
-          s
-      // Cs
-        //s
-        //s
-        //s
-          s
-            Text('B'),                                   )
-    //         Text('C'),                                   OutlinedButton(
-    //         Text('D'),                                     child: Text("Outlined Button"),
-    //         ElevatedButton(onPressed: (){                  onPressed: (){
-    //           print("clicked");                              print("Outlined Button pressed");
-    //                                                        },
-    //         }, child: Text('Click Me'))                  )
-    //       ],                                             ElevatedButton(
-    //     ),                                                 child: Text("Elevated Button"),
-    //   )                                                    onPressed: (){
-    //       print("Button Pressed");
-    //     },
-    //   )
-    //   TextButton(
-    //     child: Text("Click me"),
-    //     onPressed: (){
-    //       print("Text Button Tapped");
-    //     },
-    //     onLongPress: () {
-    //       print("Long pressed ");
-    //
-    //     },
-    //   );
-    //   Text("Hello Flutter",style: TextStyle(fontSize: 30,
-    //   color: Colors.lightBlue,
-    //   fontWeight: FontWeight.w800,
-    //     backgroundColor: Colors.orangeAccent
-    //   ),)
-    //   Center(
-    //     child: Container(
-    //       width: 200,
-    //       height: 200,
-    //       color: Colors.black,
-    //       child: Center(child: Text('This is centre is container ',style: TextStyle(color: Colors.white ),)),
-    //   ),
-    //   ), // Removed the extra closing brackets that were causing the error
-     );
   }
 }
