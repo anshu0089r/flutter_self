@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // Added 'ColorScheme' before the dot
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueAccent),
@@ -30,51 +31,40 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    var arrname = ["Ram", "Shyam","Raja","Mohan", "Sio", "Dio" ,"Mio"];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blueAccent,
         title: Text(widget.title),
       ),
-       body:
-        ListView.builder(itemBuilder: (context,index){
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(arrname[index], style: TextStyle(fontSize: 21,fontWeight: FontWeight.w500),),
-          );
+       body:Container(
+         width: double.infinity,
+         height: double.infinity,
+         color: Colors.blue.shade50,
+         child: Center(
+           child: Container(
+             width: 150,
+             height: 150,
+             decoration: BoxDecoration(
+               color: Colors.blueGrey,
+               borderRadius: BorderRadius.circular(21),
+                 border: Border.all(
+                 width: 5,
+               color: Colors.black
 
-        },
-        itemCount: arrname.length,
-          itemExtent: 200,
-          scrollDirection: Axis.horizontal,
-        )
-       // Center(
-       //   child: ListView(
-       //     scrollDirection: Axis.horizontal,
-       //     reverse: true,
-       //     children: [
-       //       Padding(
-       //         padding: const EdgeInsets.all(8.0),
-       //         child: Text("one",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-       //       ),
-       //       Padding(
-       //         padding: const EdgeInsets.all(8.0),
-       //         child: Text("Two",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-       //       ),
-       //       Padding(
-       //         padding: const EdgeInsets.all(8.0),
-       //         child: Text("Three",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-       //       ),
-       //       Padding(
-       //         padding: const EdgeInsets.all(8.0),
-       //         child: Text("Four",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-       //       ),
-       //       Padding(
-       //         padding: const EdgeInsets.all(8.0),
-       //         child: Text("Five",style: TextStyle(fontSize: 25,fontWeight: FontWeight.w500),),
-       //       )
-       //     ],
-       //   ),
+             ),
+               boxShadow:[
+                 BoxShadow(
+                   blurRadius: 51,
+                   color: Colors.grey,
+                   spreadRadius: 21
+                 )
+               ]
+             ),
+           ),
+         ),
+
+       )
 
         );
 
